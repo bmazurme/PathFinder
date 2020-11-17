@@ -33,6 +33,7 @@ namespace ConsoleApp1
             string[] path = new string[verticesCount];
             int[] distance = new int[verticesCount];
             bool[] shortestPathTreeSet = new bool[verticesCount];
+            bool flag = true;
 
             for (int i = 0; i < verticesCount; ++i)
             {
@@ -56,16 +57,44 @@ namespace ConsoleApp1
                         path[v] = v + "<" + u;
                     }
             }
+            //for (int i = 0; i < path.Length; i++)
+            //{
+            //    if (path[i] != null)
+            //        for (int j = 0; j < path.Length; j++)
+            //        {
+            //            if (path[j] != null)
+            //                if (path[j].Substring(0, path[j].IndexOf("<")) == path[i].Substring(path[i].LastIndexOf("<")+1))
+            //                path[i] = path[i] + path[j].Substring(path[j].IndexOf("<"));
+            //        }
+            //}            
 
-            for (int i = 0; i < path.Length; i++)
+            while (flag)
             {
-                if (path[i] != null)
-                    for (int j = 0; j < path.Length; j++)
-                    {
-                        if (path[j] != null)
-                            if (path[j].Substring(0, path[j].IndexOf("<")) == path[i].Substring(path[i].LastIndexOf("<")+1))
-                            path[i] = path[i] + path[j].Substring(path[j].IndexOf("<"));
-                    }
+                for (int i = 0; i < path.Length; i++)
+                {
+                    if (path[i] != null)
+                        for (int j = 0; j < path.Length; j++)
+                        {
+                            if (path[j] != null)
+                                if (path[j].Substring(0, path[j].IndexOf("<")) == path[i].Substring(path[i].LastIndexOf("<") + 1))
+                                    path[i] = path[i] + path[j].Substring(path[j].IndexOf("<"));
+                        }
+                }
+                flag = false;
+
+                for (int i = 0; i < path.Length; i++)
+                {
+                    if (path[i] != null)
+                        for (int j = 0; j < path.Length; j++)
+                        {
+                            if (path[j] != null)
+                                if (path[j].Substring(0, path[j].IndexOf("<")) == path[i].Substring(path[i].LastIndexOf("<") + 1))
+                                {
+                                    flag = true;
+                                    break;
+                                }
+                        }
+                }
             }
 
             Print(distance, verticesCount, path);
