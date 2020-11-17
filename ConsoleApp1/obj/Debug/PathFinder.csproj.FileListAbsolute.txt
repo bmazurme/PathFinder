@@ -1,0 +1,6 @@
+C:\Users\Bogdan.Mazur\Desktop\PathFinder\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Bogdan.Mazur\Desktop\PathFinder\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Bogdan.Mazur\Desktop\PathFinder\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Bogdan.Mazur\Desktop\PathFinder\ConsoleApp1\ConsoleApp1\obj\Debug\PathFinder.csproj.CoreCompileInputs.cache
+C:\Users\Bogdan.Mazur\Desktop\PathFinder\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Bogdan.Mazur\Desktop\PathFinder\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
